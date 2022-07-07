@@ -13,7 +13,7 @@ We've talked about a CSS framework like Bootstrap, let's look into a JavaScript 
 
 This time the task is simple: you will build a small Todo application that lives in your browser, and saves todos even after restarting the browser.
 
-![My image](./../image/image-site.png)
+![My image](./image/image-site.png)
 
 ## Use Techno
 
