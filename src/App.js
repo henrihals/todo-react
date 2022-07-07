@@ -4,7 +4,7 @@ import './App.scss';
 import Todolist from "./Todolist";
 import { v4 as uuidv4 } from 'uuid';
 
-const LOCAL_STORAGE_KEY = "todoApp.todos"
+const LOCAL_STORAGE_KEY = 'todoApp.todos'
 
 function App() {
   const [todos, setTodos] = useState([])
@@ -43,18 +43,26 @@ function App() {
   return (
     <>
       <h1>Ma Todo List</h1>
-      <Todolist todos={todos} toggleTodo={toggleTodo} />
-      <input ref={todoNameRef}
-        type="text" 
-        id="name" 
-        className="titre" 
-        required
-      />
-      <button onClick={handleAddTodo}>Ajouter à ma liste</button>
-      <button onClick={handleClearTodos}>Effacer toute la liste</button>
-      <div>{todos.filter(todo => !todo.complete).length} todo à faire</div>
+      <div className="writeBox">
+        <input ref={todoNameRef}
+          type="text" 
+          id="name" 
+          className="titre" 
+          required
+        />
+      </div>
+      <div className="buttonBox">
+        <button onClick={handleAddTodo}>Ajouter à ma liste</button>
+        <button onClick={handleClearTodos}>Effacer les todos faits</button>
+      </div>
+      <div className="todoNumberBox">
+        {todos.filter(todo => !todo.complete).length} todo à faire
+      </div>
+      <div className="todoBox">
+        <Todolist todos={todos} toggleTodo={toggleTodo} />
+      </div>
     </>
-  );
+  )
 }
 
 export default App;
