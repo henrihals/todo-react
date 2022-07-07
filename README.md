@@ -22,3 +22,5 @@ This time the task is simple: you will build a small Todo application that lives
  - REACT
 
 Lien Github : https://github.com/henrihals/todo-react.git
+
+Lien site : https://henrihals.github.io/todo-react/
